@@ -194,10 +194,10 @@ export default function Formulario() {
 							</p>
 						)}
 
-						{idGenerated && (
+						{idGenerado && (
 							<div style={{ padding: '15px', backgroundColor: '#fff3cd', color: '#856404', borderRadius: '6px', marginBottom: '15px' }}>
 								<p style={{ margin: 0, fontWeight: 'bold' }}>⚠️ IMPORTANTE: COPIA TU ID DE VOLUNTARIO</p>
-								<h3 style={{ margin: '10px 0', fontSize: '1.8rem', textAlign: 'center' }}>{idGenerated}</h3>
+								<h3 style={{ margin: '10px 0', fontSize: '1.8rem', textAlign: 'center' }}>{idGenerado}</h3>
 								<p style={{ margin: 0, fontSize: '0.8rem' }}>Lo vas a necesitar para modificar tu teléfono o salir del sistema.</p>
 							</div>
 						)}
