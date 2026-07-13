@@ -60,7 +60,7 @@ function Inicio() {
 
 				<div style={{ ...estilos.tarjeta, backgroundColor: '#fffaf0', borderColor: '#ffeacc' }}>
 					<div style={{ fontSize: '2rem' }}>🐱</div>
-					<h4 style={{ color: '#d35400', margin: '10px 0' }}>Mantenimiento y Cuidado</h4>
+					<h4 style={{ color: '#cd4673', margin: '10px 0' }}>Mantenimiento y Cuidado</h4>
 					<span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2c3e50' }}>{contadores.mantenimiento}</span>
 					<p style={{ color: '#8a95a5', fontSize: '0.8rem', margin: '5px 0 15px 0' }}>POSTULANTES ACTIVOS</p>
 					<hr style={{ border: '0', borderTop: '1px solid #ffeacc' }} />
@@ -71,7 +71,7 @@ function Inicio() {
 
 				<div style={{ ...estilos.tarjeta, backgroundColor: '#f4faff', borderColor: '#d4ecfc' }}>
 					<div style={{ fontSize: '2rem' }}>💰</div>
-					<h4 style={{ color: '#2980b9', margin: '10px 0' }}>Recaudación de Fondos</h4>
+					<h4 style={{ color: '#c9b00f', margin: '10px 0' }}>Recaudación de Fondos</h4>
 					<span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2c3e50' }}>{contadores.recaudacion}</span>
 					<p style={{ color: '#8a95a5', fontSize: '0.8rem', margin: '5px 0 15px 0' }}>POSTULANTES ACTIVOS</p>
 					<hr style={{ border: '0', borderTop: '1px solid #d4ecfc' }} />
@@ -82,7 +82,7 @@ function Inicio() {
 
 				<div style={{ ...estilos.tarjeta, backgroundColor: '#f5fcf9', borderColor: '#d1f7e4' }}>
 					<div style={{ fontSize: '2rem' }}>🚑</div>
-					<h4 style={{ color: '#27ae60', margin: '10px 0' }}>Rescate en Terreno</h4>
+					<h4 style={{ color: '#3d5fe6', margin: '10px 0' }}>Rescate en Terreno</h4>
 					<span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2c3e50' }}>{contadores.rescate}</span>
 					<p style={{ color: '#8a95a5', fontSize: '0.8rem', margin: '5px 0 15px 0' }}>POSTULANTES ACTIVOS</p>
 					<hr style={{ border: '0', borderTop: '1px solid #d1f7e4' }} />
