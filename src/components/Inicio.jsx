@@ -4,16 +4,16 @@ function Inicio() {
 	const [contadores, setContadores] = useState({ mantenimiento: 0, recaudacion: 0, rescate: 0 });
 
 	useEffect(() => {
-		// Leer los datos del Local Storage
+
 		const listaVoluntarios = JSON.parse(localStorage.getItem('voluntarios')) || [];
 
-		// Función para evitar problemas con mayúsculas y tildes
+		//evitar problemas con mayúsculas y tildes
 		const normalizar = (texto) => {
 			if (!texto) return '';
 			return texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
 		};
 
-		// Contar voluntarios por área
+		//contar voluntarios 
 		const conteo = listaVoluntarios.reduce((acc, voluntario) => {
 			const areaFormateada = normalizar(voluntario.area);
 
@@ -30,7 +30,7 @@ function Inicio() {
 		setContadores(conteo);
 	}, []);
 
-	// Estilos básicos en objetos para limpiar las etiquetas de abajo
+	//estilos básicos para limpiar las etiquetas de abajo y quede bonito yuju
 	const estilos = {
 		seccion: { padding: '30px 20px', maxWidth: '950px', margin: '0 auto', fontFamily: 'sans-serif' },
 		hero: { background: '#d76eab', color: 'white', padding: '30px', borderRadius: '15px', textAlign: 'center', marginBottom: '30px' },
@@ -55,10 +55,9 @@ function Inicio() {
 				<p style={{ color: '#7f8c8d', margin: 0 }}>Se voluntario en el área con menos apoyo para ayudarnos a equilibrar nuestra labor</p>
 			</div>
 
-			{/* contador de postulantes */}
+			{/*contador de postulantes en vivoo yuju*/}
 			<div style={estilos.contenedorTarjetas}>
 
-				{/* contador1: Mantenimiento y Cuidado */}
 				<div style={{ ...estilos.tarjeta, backgroundColor: '#fffaf0', borderColor: '#ffeacc' }}>
 					<div style={{ fontSize: '2rem' }}>🐱</div>
 					<h4 style={{ color: '#d35400', margin: '10px 0' }}>Mantenimiento y Cuidado</h4>
@@ -70,7 +69,6 @@ function Inicio() {
 					</p>
 				</div>
 
-				{/* contador2: Recaudación de Fondos */}
 				<div style={{ ...estilos.tarjeta, backgroundColor: '#f4faff', borderColor: '#d4ecfc' }}>
 					<div style={{ fontSize: '2rem' }}>💰</div>
 					<h4 style={{ color: '#2980b9', margin: '10px 0' }}>Recaudación de Fondos</h4>
@@ -82,7 +80,6 @@ function Inicio() {
 					</p>
 				</div>
 
-				{/* contador3: Rescate en Terreno */}
 				<div style={{ ...estilos.tarjeta, backgroundColor: '#f5fcf9', borderColor: '#d1f7e4' }}>
 					<div style={{ fontSize: '2rem' }}>🚑</div>
 					<h4 style={{ color: '#27ae60', margin: '10px 0' }}>Rescate en Terreno</h4>

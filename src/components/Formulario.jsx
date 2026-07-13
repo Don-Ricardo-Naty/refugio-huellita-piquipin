@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 function Formulario() {
-	// Variables de estado para los campos del formulario de registro
+
 	const [nombre, setNombre] = useState('');
 	const [alias, setAlias] = useState('');
 	const [edad, setEdad] = useState('');
@@ -9,63 +9,63 @@ function Formulario() {
 	const [telefono, setTelefono] = useState('');
 	const [area, setArea] = useState('');
 
-	// Estados para controlar los mensajes de aviso
+
 	const [mensajeExito, setMensajeExito] = useState('');
 	const [mensajeError, setMensajeError] = useState('');
 	const [idGenerado, setIdGenerado] = useState('');
 
-	// Estados para el formulario de modificar telefono
+
 	const [idModificar, setIdModificar] = useState('');
 	const [nuevoTelefono, setNuevoTelefono] = useState('');
 
-	// Estado para el formulario de dar de baja
+
 	const [idBaja, setIdBaja] = useState('');
 
-	// Estado para guardar y mostrar la lista de voluntarios en pantalla
+
 	const [voluntarios, setVoluntarios] = useState([]);
 
-	// Cargar la lista del LocalStorage apenas se abra la pagina
+
 	useEffect(() => {
 		const registros = JSON.parse(localStorage.getItem('voluntarios')) || [];
 		setVoluntarios(registros);
 	}, []);
 
-	// 1. FUNCION: REGISTRAR UN NUEVO VOLUNTARIO (CREATE)
+
 	const registrarVoluntario = (e) => {
 		e.preventDefault();
 		setMensajeError('');
 		setMensajeExito('');
 		setIdGenerado('');
 
-		// Validar que no existan campos vacios
+		//validar campos vacios que obligue a rellenat todos
 		if (!nombre || !alias || !edad || !correo || !telefono || !area) {
 			setMensajeError('Por favor, rellena todos los campos del formulario.');
 			return;
 		}
 
-		// Validar la edad minima
+		//validar la edad
 		if (Number(edad) < 18) {
 			setMensajeError('Debes ser mayor de edad (18 años o más).');
 			return;
 		}
 
-		// Validacion simple para el arroba del correo
+		// Validacion para el arroba por lo menos y el usuario no meta cualquier lesera 
 		if (!correo.includes('@')) {
 			setMensajeError('Por favor, ingresa un correo valido.');
 			return;
 		}
 
-		// Validar que el telefono tenga 9 digitos exactos
+		//validar que el telefono tenga una longitud de 9 numeros
 		if (telefono.length !== 9) {
 			setMensajeError('El teléfono debe tener exactamente 9 números.');
 			return;
 		}
 
-		// Generar un ID al azar de 6 numeros y pasarlo a texto
+		//generar un ID ramdom de 6 numeros
 		const nuevoId = Math.floor(100000 + Math.random() * 900000).toString();
 		const listaActual = JSON.parse(localStorage.getItem('voluntarios')) || [];
 
-		// Crear el objeto del nuevo voluntario
+		//crear nuevo voluntario
 		const nuevoVoluntario = {
 			id: nuevoId,
 			nombre: nombre,
@@ -76,7 +76,7 @@ function Formulario() {
 			area: area
 		};
 
-		// Guardar en el array, actualizar LocalStorage y refrescar la lista de la pantalla
+		//guardar en el array, actualizar LocalStorage y refrescar la lista de la pantalla para que este como "en vivo" 
 		listaActual.push(nuevoVoluntario);
 		localStorage.setItem('voluntarios', JSON.stringify(listaActual));
 		setVoluntarios(listaActual);
@@ -84,11 +84,10 @@ function Formulario() {
 		setMensajeExito('¡Inscripción procesada con éxito!');
 		setIdGenerado(nuevoId);
 
-		// Limpiar las cajas del formulario
 		setNombre(''); setAlias(''); setEdad(''); setCorreo(''); setTelefono(''); setArea('');
 	};
 
-	// 2. FUNCION: ACTUALIZAR EL TELEFONO (UPDATE)
+	//actualizar datos(telefono noma)
 	const modificarTelefono = (e) => {
 		e.preventDefault();
 		setMensajeError('');
@@ -106,14 +105,14 @@ function Formulario() {
 
 		let listaActual = JSON.parse(localStorage.getItem('voluntarios')) || [];
 
-		// Buscar si el ID existe realmente
+		//busca ID
 		const encontrado = listaActual.find(v => v.id === idModificar);
 		if (!encontrado) {
-			setMensajeError('El ID ingresado no coincide con ningún voluntario.');
+			setMensajeError('El ID ingresado no coincide con ningun usuario, intenta otra vez!.');
 			return;
 		}
 
-		// Modificar el telefono usando un ciclo .map
+		//modificar el telefono 
 		const listaModificada = listaActual.map((v) => {
 			if (v.id === idModificar) {
 				return { ...v, telefono: nuevoTelefono };
@@ -128,7 +127,7 @@ function Formulario() {
 		setNuevoTelefono('');
 	};
 
-	// 3. FUNCION: ELIMINAR O DAR DE BAJA (DELETE)
+	//dar de baja si se pilla el id o chao nomas si no existe
 	const darDeBaja = (e) => {
 		e.preventDefault();
 		setMensajeError('');
@@ -156,7 +155,6 @@ function Formulario() {
 		setIdBaja('');
 	};
 
-	// Funcion basica para pintar un color segun el area
 	const darColor = (areaActual) => {
 		if (areaActual === "Mantenimiento y Cuidado") return '#ffb6c1';
 		if (areaActual === "Recaudación de Fondos") return '#f1c40f';
@@ -231,7 +229,7 @@ function Formulario() {
 						</form>
 					</div>
 
-					{/* Caja de Modificar */}
+					{/*modificarse con id*/}
 					<div style={{ padding: '20px', backgroundColor: '#ebf5fb', borderRadius: '10px', border: '1px solid #aec6cf', marginBottom: '20px' }}>
 						<h3 style={{ color: '#2980b9', marginTop: 0 }}>📞 Actualizar Teléfono de Contacto</h3>
 						<form onSubmit={modificarTelefono} style={{ display: 'grid', gap: '10px' }}>
@@ -241,7 +239,7 @@ function Formulario() {
 						</form>
 					</div>
 
-					{/* Caja de Eliminar */}
+					{/*Eliminarse con id*/}
 					<div style={{ padding: '20px', backgroundColor: '#fdf2f2', borderRadius: '10px', border: '1px solid #f5c6cb' }}>
 						<h3 style={{ color: '#c0392b', marginTop: 0 }}>¿Deseas Salir del Voluntariado? ❌</h3>
 						<form onSubmit={darDeBaja} style={{ display: 'flex', gap: '10px' }}>
@@ -252,7 +250,7 @@ function Formulario() {
 
 				</div>
 
-				{/* Columna Derecha de Visualizacion Lateral */}
+				{/*lista de voluntarios */}
 				<div style={{ flex: '1', minWidth: '300px', backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '12px', border: '1px solid #e9ecef', alignSelf: 'flex-start' }}>
 					<h3 style={{ color: '#2c3e50', marginTop: 0, marginBottom: '5px' }}>👥 Voluntarios Activos</h3>
 					<p style={{ fontSize: '13px', color: '#7f8c8d', marginBottom: '20px' }}>Los identificadores privados no se muestran por seguridad.</p>
