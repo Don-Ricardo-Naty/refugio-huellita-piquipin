@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 function Inicio() {
-	const [contadores,setContadores]=useState({mantenimiento:0,recaudacion: 0,rescate:0});
+	const [contadores, setContadores] = useState({ mantenimiento: 0, recaudacion: 0, rescate: 0 });
 
 	useEffect(() => {
 
@@ -41,7 +41,7 @@ function Inicio() {
 	return (
 		<section style={estilos.seccion}>
 
-			
+
 			<div style={estilos.hero}>
 				<h2 style={{ margin: '0 0 10px 0' }}>Refugio Gatuno</h2>
 				<p style={{ margin: 0 }}>
@@ -57,7 +57,7 @@ function Inicio() {
 
 			{/*contador de postulantes en vivoo yuju*/}
 			<div style={estilos.contenedorTarjetas}>
-/////////////////////////////////////////////////////////////////////////////
+
 				<div style={{ ...estilos.tarjeta, backgroundColor: '#feafe6', borderColor: '#ffccf1' }}>
 					<div style={{ fontSize: '2rem' }}>🐱</div>
 					<h4 style={{ color: '#cd4673', margin: '10px 0' }}>Mantenimiento y Cuidado</h4>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';////////////////////////////////////////////7
+import { useState, useEffect } from 'react';
 
 function Formulario() {
 
