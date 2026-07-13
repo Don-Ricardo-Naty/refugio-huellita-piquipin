@@ -58,7 +58,7 @@ function Inicio() {
 			{/*contador de postulantes en vivoo yuju*/}
 			<div style={estilos.contenedorTarjetas}>
 
-				<div style={{ ...estilos.tarjeta, backgroundColor: '#fffaf0', borderColor: '#ffccf1' }}>
+				<div style={{ ...estilos.tarjeta, backgroundColor: '#feafe6', borderColor: '#ffccf1' }}>
 					<div style={{ fontSize: '2rem' }}>🐱</div>
 					<h4 style={{ color: '#cd4673', margin: '10px 0' }}>Mantenimiento y Cuidado</h4>
 					<span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2c3e50' }}>{contadores.mantenimiento}</span>
@@ -69,7 +69,7 @@ function Inicio() {
 					</p>
 				</div>
 
-				<div style={{ ...estilos.tarjeta, backgroundColor: '#f4faff', borderColor: '#f9db88' }}>
+				<div style={{ ...estilos.tarjeta, backgroundColor: '#f7f4a8', borderColor: '#f9db88' }}>
 					<div style={{ fontSize: '2rem' }}>💰</div>
 					<h4 style={{ color: '#c9b00f', margin: '10px 0' }}>Recaudación de Fondos</h4>
 					<span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2c3e50' }}>{contadores.recaudacion}</span>
@@ -80,7 +80,7 @@ function Inicio() {
 					</p>
 				</div>
 
-				<div style={{ ...estilos.tarjeta, backgroundColor: '#f5fcf9', borderColor: '#7da3d7' }}>
+				<div style={{ ...estilos.tarjeta, backgroundColor: '#85caf5', borderColor: '#7da3d7' }}>
 					<div style={{ fontSize: '2rem' }}>🚑</div>
 					<h4 style={{ color: '#3d5fe6', margin: '10px 0' }}>Rescate en Terreno</h4>
 					<span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2c3e50' }}>{contadores.rescate}</span>
