@@ -63,7 +63,7 @@ function Inicio() {
 					<h4 style={{ color: '#cd4673', margin: '10px 0' }}>Mantenimiento y Cuidado</h4>
 					<span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2c3e50' }}>{contadores.mantenimiento}</span>
 					<p style={{ color: '#8a95a5', fontSize: '0.8rem', margin: '5px 0 15px 0' }}>POSTULANTES ACTIVOS</p>
-					<hr style={{ border: '0', borderTop: '1px solid #ffeacc' }} />
+					<hr style={{ border: '0', borderTop: '1px solid #ffccf1' }} />
 					<p style={{ fontSize: '0.9rem', color: '#566573', textAlign: 'left', lineHeight: '1.4' }}>
 						Consiste en la labor interna en el refugio garantizando los cuidados básicos: alimentación, agua fresca, limpieza de jaulas y revisión de salud. También coordina tratamientos médicos sencillos.
 					</p>
@@ -74,7 +74,7 @@ function Inicio() {
 					<h4 style={{ color: '#c9b00f', margin: '10px 0' }}>Recaudación de Fondos</h4>
 					<span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2c3e50' }}>{contadores.recaudacion}</span>
 					<p style={{ color: '#8a95a5', fontSize: '0.8rem', margin: '5px 0 15px 0' }}>POSTULANTES ACTIVOS</p>
-					<hr style={{ border: '0', borderTop: '1px solid #d4ecfc' }} />
+					<hr style={{ border: '0', borderTop: '1px solid #feeca4' }} />
 					<p style={{ fontSize: '0.9rem', color: '#566573', textAlign: 'left', lineHeight: '1.4' }}>
 						Tu rol consistirá en apoyar en la recolección de donaciones en espacios públicos y eventos, difundir las campañas de la fundación, vender accesorios de mascotas y administrar redes sociales.
 					</p>
@@ -85,7 +85,7 @@ function Inicio() {
 					<h4 style={{ color: '#3d5fe6', margin: '10px 0' }}>Rescate en Terreno</h4>
 					<span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2c3e50' }}>{contadores.rescate}</span>
 					<p style={{ color: '#8a95a5', fontSize: '0.8rem', margin: '5px 0 15px 0' }}>POSTULANTES ACTIVOS</p>
-					<hr style={{ border: '0', borderTop: '1px solid #d1f7e4' }} />
+					<hr style={{ border: '0', borderTop: '1px solid #9febf5' }} />
 					<p style={{ fontSize: '0.9rem', color: '#566573', textAlign: 'left', lineHeight: '1.4' }}>
 						Acción directa en primera línea. El equipo revisa los reportes de abandono de los ciudadanos para evaluar los casos críticos, salir a terreno a buscar a los animales y trasladarlos de forma segura.
 					</p>
