@@ -58,34 +58,34 @@ function Inicio() {
 			{/*contador de postulantes en vivoo yuju*/}
 			<div style={estilos.contenedorTarjetas}>
 
-				<div style={{ ...estilos.tarjeta, backgroundColor: '#feafe6', borderColor: '#ffccf1' }}>
+				<div style={{ ...estilos.tarjeta, backgroundColor: '#fffaf0', borderColor: '#ffeacc' }}>
 					<div style={{ fontSize: '2rem' }}>🐱</div>
-					<h4 style={{ color: '#cd4673', margin: '10px 0' }}>Mantenimiento y Cuidado</h4>
+					<h4 style={{ color: '#d35400', margin: '10px 0' }}>Mantenimiento y Cuidado</h4>
 					<span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2c3e50' }}>{contadores.mantenimiento}</span>
 					<p style={{ color: '#8a95a5', fontSize: '0.8rem', margin: '5px 0 15px 0' }}>POSTULANTES ACTIVOS</p>
-					<hr style={{ border: '0', borderTop: '1px solid #ffccf1' }} />
+					<hr style={{ border: '0', borderTop: '1px solid #ffeacc' }} />
 					<p style={{ fontSize: '0.9rem', color: '#566573', textAlign: 'left', lineHeight: '1.4' }}>
 						Consiste en la labor interna en el refugio garantizando los cuidados básicos: alimentación, agua fresca, limpieza de jaulas y revisión de salud. También coordina tratamientos médicos sencillos.
 					</p>
 				</div>
 
-				<div style={{ ...estilos.tarjeta, backgroundColor: '#f7f4a8', borderColor: '#f9db88' }}>
+				<div style={{ ...estilos.tarjeta, backgroundColor: '#f4faff', borderColor: '#d4ecfc' }}>
 					<div style={{ fontSize: '2rem' }}>💰</div>
-					<h4 style={{ color: '#c9b00f', margin: '10px 0' }}>Recaudación de Fondos</h4>
+					<h4 style={{ color: '#2980b9', margin: '10px 0' }}>Recaudación de Fondos</h4>
 					<span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2c3e50' }}>{contadores.recaudacion}</span>
 					<p style={{ color: '#8a95a5', fontSize: '0.8rem', margin: '5px 0 15px 0' }}>POSTULANTES ACTIVOS</p>
-					<hr style={{ border: '0', borderTop: '1px solid #feeca4' }} />
+					<hr style={{ border: '0', borderTop: '1px solid #d4ecfc' }} />
 					<p style={{ fontSize: '0.9rem', color: '#566573', textAlign: 'left', lineHeight: '1.4' }}>
 						Tu rol consistirá en apoyar en la recolección de donaciones en espacios públicos y eventos, difundir las campañas de la fundación, vender accesorios de mascotas y administrar redes sociales.
 					</p>
 				</div>
 
-				<div style={{ ...estilos.tarjeta, backgroundColor: '#85caf5', borderColor: '#7da3d7' }}>
+				<div style={{ ...estilos.tarjeta, backgroundColor: '#f5fcf9', borderColor: '#d1f7e4' }}>
 					<div style={{ fontSize: '2rem' }}>🚑</div>
-					<h4 style={{ color: '#3d5fe6', margin: '10px 0' }}>Rescate en Terreno</h4>
+					<h4 style={{ color: '#27ae60', margin: '10px 0' }}>Rescate en Terreno</h4>
 					<span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2c3e50' }}>{contadores.rescate}</span>
 					<p style={{ color: '#8a95a5', fontSize: '0.8rem', margin: '5px 0 15px 0' }}>POSTULANTES ACTIVOS</p>
-					<hr style={{ border: '0', borderTop: '1px solid #9febf5' }} />
+					<hr style={{ border: '0', borderTop: '1px solid #d1f7e4' }} />
 					<p style={{ fontSize: '0.9rem', color: '#566573', textAlign: 'left', lineHeight: '1.4' }}>
 						Acción directa en primera línea. El equipo revisa los reportes de abandono de los ciudadanos para evaluar los casos críticos, salir a terreno a buscar a los animales y trasladarlos de forma segura.
 					</p>
