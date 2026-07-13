@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';////////////////////////////////////////////7
 
 function Formulario() {
 
@@ -49,7 +49,7 @@ function Formulario() {
 			return;
 		}
 
-		// Validacion para el arroba por lo menos y el usuario no meta cualquier lesera 
+		//validacion para el arroba por lo menos y el usuario no meta cualquier lesera 
 		if (!correo.includes('@')) {
 			setMensajeError('Por favor, ingresa un correo valido.');
 			return;

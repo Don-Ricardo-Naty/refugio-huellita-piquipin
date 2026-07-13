@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+/////////////////////////////////////////////////////////////////////////////////////
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; 
 import Inicio from './components/Inicio';
 import Acerca from './components/Acerca';
 import Formulario from './components/Formulario';
@@ -14,7 +15,7 @@ function App() {
         <header style={{ backgroundColor: '#4c0e2d', padding: '15px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ color: '#e7dee2', fontWeight: 'bold', fontSize: '1.5rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
             🐾 Huellita Piquipin
-          </div>
+          </div>/////////////////////////////////////////////
           <nav style={{ display: 'flex', gap: '20px' }}>
             <Link to="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>Inicio</Link>
             <Link to="/ser-voluntario" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>Ser Voluntario</Link>
@@ -24,7 +25,7 @@ function App() {
 
         {/*vista principal*/}
         <main style={{ flex: '1', backgroundColor: '#fff' }}>
-          <Routes>
+          <Routes>//////////////////////////////////////////////////////////////////////////
             <Route path="/" element={<Inicio />} />
             <Route path="/ser-voluntario" element={<Formulario />} />
             <Route path="/nosotros" element={<Acerca />} />
